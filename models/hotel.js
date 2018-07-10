@@ -3,14 +3,8 @@ class Hotel {
     constructor(name, city) {
         this.name = name
         this.city = city
+        this.reviews = []
     }
 
-    hotelName() {
-        return this.name
-    }
-
-    hotelCity() {
-        return this.city
-    }
 }
 module.exports = Hotel

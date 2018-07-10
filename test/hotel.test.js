@@ -7,18 +7,18 @@ describe('Hotel', function() {
     var hotel = new Hotel("Hilton Metropole", "London")
 
     it("returns the name of the hotel", function(){
-        result = hotel.hotelName()
+        result = hotel.name
         expect(result).to.equal("Hilton Metropole")
     })
 
     it("returns the location of the hotel (city)", function(){
-        result = hotel.hotelCity()
+        result = hotel.city
         expect(result).to.equal("London")
     })
 
     it("returns a list of the reviews for the hotel", function(){
-        result = hotel.getReviews()
-        expect(result).to.equal([])
+        result = hotel.reviews
+        expect(result).to.eql([])
     })
 
 
