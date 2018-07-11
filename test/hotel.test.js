@@ -21,5 +21,16 @@ describe('Hotel', function() {
         expect(result).to.eql([])
     })
 
+    it("returns the number of the reviews for the hotel", function(){
+        result = hotel.reviewCount()
+        expect(result).to.eql(0)
+    })
+
+    it("returns an average rating for the hotel", function(){
+        result = hotel.rating()
+        expect(result).to.eql(0)
+    })
+    
+
 
 });
