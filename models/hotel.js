@@ -23,5 +23,17 @@ class Hotel {
             return Math.round(averageRating)
         }
     }
+
+    ratingAsStars() {      
+        return "*".repeat(this.rating())
+    }
+
+    urlSlug() {
+        var nameLowercase = this.name.toLowerCase()
+        var cityLowercase = this.city.toLowerCase()
+        var splitNameArr = nameLowercase.split(" ")
+        splitNameArr.push(cityLowercase)
+        return splitNameArr.join("_")
+    }
 }
 module.exports = Hotel

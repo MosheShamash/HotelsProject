@@ -2,6 +2,8 @@ const chai = require('chai');
 const expect = chai.expect;
 
 var Hotel = require('../models/hotel.js')
+
+
 describe('Hotel', function() {
 
     var hotel = new Hotel("Hilton Metropole", "London")
@@ -31,6 +33,14 @@ describe('Hotel', function() {
         expect(result).to.eql(0)
     })
     
+    it("returns a star rating for the hotel", function(){
+        result = hotel.ratingAsStars()
+        expect(result).to.eql("")
+    })
 
-
+    it("returns a url slug for the hotel", function(){
+        result = hotel.urlSlug()
+        expect(result).to.eql("hilton_metropole_london")
+    })
 });
+
